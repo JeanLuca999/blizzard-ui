@@ -16,5 +16,6 @@ export const GlobalStyle = createGlobalStyle`
     --tablet: 768px;
     --desktop: 1440px;
     --large-desktop: 1920px;
+    --cta-color: #00aeff;
   }
 `;
