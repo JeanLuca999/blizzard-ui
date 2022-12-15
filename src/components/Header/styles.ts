@@ -1,10 +1,21 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
+  position: relative;
   min-height: 8rem;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  ::before {
+    position: absolute;
+    content: "";
+    width: 4.3rem;
+    height: 0.2rem;
+    background-color: #00aeff;
+    bottom: -2px;
+    left: 2.4rem;
+  }
 `;
 
 export const Nav = styled.nav`
