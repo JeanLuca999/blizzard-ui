@@ -15,6 +15,7 @@ import starcraftIcon from "assets/starcraft-icon.png";
 import { useEffect, useState } from "react";
 
 export type BannerItem = {
+  id: number;
   banner: string;
   title: string;
   description: string;
@@ -25,6 +26,7 @@ export type BannerItem = {
 
 const bannerList: BannerItem[] = [
   {
+    id: 1,
     banner: diabloBanner,
     icon: diabloIcon,
     alt: "diablo 4",
@@ -33,6 +35,7 @@ const bannerList: BannerItem[] = [
     ctaText: "Jogue agora",
   },
   {
+    id: 2,
     banner: hearthstoneBanner,
     icon: hearthstoneIcon,
     alt: "hearthstone",
@@ -42,6 +45,7 @@ const bannerList: BannerItem[] = [
     ctaText: "Reserve agora na pré-venda",
   },
   {
+    id: 3,
     banner: wowBanner,
     icon: wowIcon,
     alt: "wow",
@@ -52,12 +56,13 @@ const bannerList: BannerItem[] = [
 ];
 
 export function useTransitionBanner() {
-  const [curerntItem, setCurrentItem] = useState<BannerItem>(bannerList[0]);
+  const [currentItem, setCurrentItem] = useState<BannerItem>(bannerList[0]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const icons: Icon[] = bannerList.map((item) => ({
     alt: item.alt,
     icon: item.icon,
+    current: currentItem.id === item.id,
     onClick: () => setCurrentItem(item),
   }));
 
@@ -71,11 +76,11 @@ export function useTransitionBanner() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentItem.id]);
 
   useEffect(() => {
     setCurrentItem(bannerList[currentIndex]);
   }, [currentIndex]);
 
-  return { icons, current: curerntItem };
+  return { icons, current: currentItem };
 }
