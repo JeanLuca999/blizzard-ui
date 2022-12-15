@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const ProgressBar = keyframes`
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+`;
 
 export const Wrapper = styled.div`
   min-height: 62.5rem;
@@ -9,16 +18,19 @@ export const Wrapper = styled.div`
     #020203 100%
   );
   mix-blend-mode: unset;
+`;
 
-  ::before {
-    position: absolute;
-    content: "";
-    width: 20.2rem;
-    height: 0.2rem;
-    background-color: var(--cta-color);
-    bottom: -2px;
-    left: 0;
-  }
+export const Loader = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--cta-color);
+  bottom: -2px;
+  left: 0;
+  animation-name: ${ProgressBar};
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 `;
 
 export const BannerImage = styled.img`
@@ -51,7 +63,7 @@ export const ContentIcons = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 4rem;
+  font-size: clamp(3rem, 3rem + 2vw, 4rem);
   width: 80%;
   max-width: 56.2rem;
   font-weight: 700;
@@ -80,16 +92,14 @@ export const CTA = styled.button`
   cursor: pointer;
 `;
 
-export const Icon = styled.img`
+type IconProps = {
+  current: boolean;
+};
+export const Icon = styled.img<IconProps>`
   width: 4.8rem;
   height: 4.8rem;
   object-fit: contain;
   transition: ease 0.4s;
   cursor: pointer;
-  filter: grayscale(100%);
-
-  :focus,
-  :focus-within {
-    filter: none;
-  }
+  filter: ${({ current }) => (current ? "none" : "grayscale(100%)")};
 `;
