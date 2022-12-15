@@ -12,7 +12,7 @@ export const Header = styled.header`
     content: "";
     width: 4.3rem;
     height: 0.2rem;
-    background-color: #00aeff;
+    background-color: var(--cta-color);
     bottom: -2px;
     left: 2.4rem;
   }
