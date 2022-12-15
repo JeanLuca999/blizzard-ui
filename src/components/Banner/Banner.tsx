@@ -4,6 +4,7 @@ import * as S from "./styles";
 export type Icon = {
   alt?: string;
   icon: string;
+  current: boolean;
   onClick: () => void;
 };
 
@@ -20,6 +21,7 @@ export const Banner = (props: IBanner) => {
   const { children, title, description, ctaText, banner, icons } = props;
   return (
     <S.Wrapper>
+      <S.Loader key={banner} />
       <S.BannerImage alt="banner" src={banner} />
       {children}
       <S.Container>
@@ -37,6 +39,7 @@ export const Banner = (props: IBanner) => {
                 src={item.icon}
                 onClick={item.onClick}
                 alt={item.alt}
+                current={item.current}
                 tabIndex={0}
               />
             ))}
