@@ -9,6 +9,16 @@ export const Wrapper = styled.div`
     #020203 100%
   );
   mix-blend-mode: unset;
+
+  ::before {
+    position: absolute;
+    content: "";
+    width: 20.2rem;
+    height: 0.2rem;
+    background-color: #00aeff;
+    bottom: -2px;
+    left: 0;
+  }
 `;
 
 export const BannerImage = styled.img`
