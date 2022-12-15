@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
     content: "";
     width: 20.2rem;
     height: 0.2rem;
-    background-color: #00aeff;
+    background-color: var(--cta-color);
     bottom: -2px;
     left: 0;
   }
@@ -66,7 +66,7 @@ export const Description = styled.p`
 export const CTA = styled.button`
   font-family: inherit;
   border: 0;
-  background-color: #00aeff;
+  background-color: var(--cta-color);
   border-radius: 4px;
   padding: 1.4rem 3.2rem;
   color: #fff;
