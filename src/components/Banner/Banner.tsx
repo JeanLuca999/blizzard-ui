@@ -30,15 +30,16 @@ export const Banner = (props: IBanner) => {
         </S.ContentText>
 
         <S.ContentIcons>
-          {icons.map((item) => (
-            <S.Icon
-              key={item.icon}
-              src={item.icon}
-              onClick={item.onClick}
-              alt={item.alt}
-              tabIndex={0}
-            />
-          ))}
+          {!!icons.length &&
+            icons.map((item) => (
+              <S.Icon
+                key={item.icon}
+                src={item.icon}
+                onClick={item.onClick}
+                alt={item.alt}
+                tabIndex={0}
+              />
+            ))}
         </S.ContentIcons>
       </S.Container>
     </S.Wrapper>
