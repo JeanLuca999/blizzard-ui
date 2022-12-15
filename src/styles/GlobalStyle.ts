@@ -17,5 +17,6 @@ export const GlobalStyle = createGlobalStyle`
     --desktop: 1440px;
     --large-desktop: 1920px;
     --cta-color: #00aeff;
+    --cta-hover: #40C2FF;
   }
 `;
