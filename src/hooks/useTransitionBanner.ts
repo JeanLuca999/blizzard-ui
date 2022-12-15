@@ -14,46 +14,54 @@ import starcraftIcon from "assets/starcraft-icon.png";
 
 import { useEffect, useState } from "react";
 
+export type BannerItem = {
+  banner: string;
+  title: string;
+  description: string;
+  ctaText: string;
+};
+
+const bannerList: BannerItem[] = [
+  {
+    banner: diabloBanner,
+    title: "Retorne à escuridão com o game Diablo IV",
+    description: "O retorno de Lilith traz uma era de escuridão e sofrimento",
+    ctaText: "Jogue agora",
+  },
+  {
+    banner: hearthstoneBanner,
+    title: "Novo pacote de expansão de Hearthstone",
+    description:
+      "A Horda e a Aliança se encontraram no Vale Alterac para lutar",
+    ctaText: "Reserve agora na pré-venda",
+  },
+  {
+    banner: wowBanner,
+    title: "Desbrave as Terras Sombrias em Shadowlands!",
+    description: "O que jaz além do mundo que você conhece?",
+    ctaText: "Reserve agora na pré-venda",
+  },
+];
+
 export function useTransitionBanner() {
-  const bannerList = [
-    {
-      banner: diabloBanner,
-      title: "Retorne à escuridão com o game Diablo IV",
-      description: "O retorno de Lilith traz uma era de escuridão e sofrimento",
-      ctaText: "Jogue agora",
-    },
-    {
-      banner: hearthstoneBanner,
-      title: "Novo pacote de expansão de Hearthstone",
-      description:
-        "A Horda e a Aliança se encontraram no Vale Alterac para lutar",
-      ctaText: "Reserve agora na pré-venda",
-    },
-    {
-      banner: wowBanner,
-      title: "Desbrave as Terras Sombrias em Shadowlands!",
-      description: "O que jaz além do mundo que você conhece?",
-      ctaText: "Reserve agora na pré-venda",
-    },
-  ];
-  const [currentBanner, setCurrentBanner] = useState(bannerList[0]);
+  const [curerntItem, setCurrentItem] = useState<BannerItem>(bannerList[0]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const gameIcons: Icon[] = [
+  const icons: Icon[] = [
     {
       alt: "diablo icon",
       icon: diabloIcon,
-      onClick: () => setCurrentBanner(bannerList[0]),
+      onClick: () => setCurrentItem(bannerList[0]),
     },
     {
       alt: "hearthstone icon",
       icon: hearthstoneIcon,
-      onClick: () => setCurrentBanner(bannerList[1]),
+      onClick: () => setCurrentItem(bannerList[1]),
     },
     {
       alt: "wow icon",
       icon: wowIcon,
-      onClick: () => setCurrentBanner(bannerList[2]),
+      onClick: () => setCurrentItem(bannerList[2]),
     },
     {
       alt: "diablo 1 icon",
@@ -83,8 +91,8 @@ export function useTransitionBanner() {
   }, []);
 
   useEffect(() => {
-    setCurrentBanner(bannerList[currentIndex]);
+    setCurrentItem(bannerList[currentIndex]);
   }, [currentIndex]);
 
-  return { icons: gameIcons, current: currentBanner };
+  return { icons, current: curerntItem };
 }
