@@ -33,6 +33,8 @@ export const BannerImage = styled.img`
 
 export const Container = styled.div`
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
   height: calc(62.5rem - 8rem);
   padding-left: 2.4rem;
   padding-right: 2.4rem;
@@ -44,6 +46,8 @@ export const ContentText = styled.div``;
 export const ContentIcons = styled.div`
   display: flex;
   column-gap: 1rem;
+  align-self: end;
+  padding-bottom: 6rem;
 `;
 
 export const Title = styled.h1`
