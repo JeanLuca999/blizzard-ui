@@ -90,6 +90,12 @@ export const CTA = styled.button`
   font-size: 1.6rem;
   line-height: 2.4rem;
   cursor: pointer;
+  transition: 0.4s ease;
+
+  :hover,
+  :focus {
+    background-color: var(--cta-hover);
+  }
 `;
 
 type IconProps = {
