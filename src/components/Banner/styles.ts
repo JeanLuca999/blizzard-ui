@@ -64,8 +64,8 @@ export const LogoBanner = styled.img`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr auto;
-  height: calc(62.5rem - 8rem);
+  grid-template-rows: 1fr auto;
+  min-height: calc(62.5rem - 8rem);
   padding-left: 2.4rem;
   padding-right: 2.4rem;
   margin-top: 7rem;
@@ -114,10 +114,16 @@ export const Title = styled.h1`
   font-weight: 700;
   line-height: 110%;
   color: #fff;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    font-size: clamp(3.5rem, 3.5rem + 2vw, 6.4rem);
+    width: 100%;
+  }
 `;
 
 export const Description = styled.p`
   font-size: 1.8rem;
+  min-height: 5ch;
   font-weight: 400;
   color: #fff;
   margin-top: 1.6rem;
