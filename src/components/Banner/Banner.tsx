@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Button } from "components/Button";
 import * as S from "./styles";
+import { GifViewer } from "components/GifViewer";
 
 export type Icon = {
   alt?: string;
@@ -15,11 +16,24 @@ export interface IBanner {
   ctaText: string;
   children: ReactNode;
   banner: string;
+  logoBanner: string;
+  gifPoster: string;
+  gifSrc: string;
   icons: Icon[];
 }
 
 export const Banner = (props: IBanner) => {
-  const { children, title, description, ctaText, banner, icons } = props;
+  const {
+    children,
+    title,
+    description,
+    ctaText,
+    banner,
+    logoBanner,
+    gifPoster,
+    gifSrc,
+    icons,
+  } = props;
   return (
     <S.Wrapper>
       <S.Loader key={banner} />
@@ -31,6 +45,8 @@ export const Banner = (props: IBanner) => {
           <S.Description>{description}</S.Description>
           <Button scheme="fill">{ctaText}</Button>
         </S.ContentText>
+
+        <S.LogoBanner src={logoBanner} alt="" />
 
         <S.ContentIcons>
           {!!icons.length &&
@@ -45,6 +61,11 @@ export const Banner = (props: IBanner) => {
               />
             ))}
         </S.ContentIcons>
+
+        <S.ContentGif>
+          <S.TitleGif>Assista o trailer</S.TitleGif>
+          <GifViewer poster={gifPoster} src={gifSrc} />
+        </S.ContentGif>
       </S.Container>
     </S.Wrapper>
   );
