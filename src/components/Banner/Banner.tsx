@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Button } from "components/Button";
 import * as S from "./styles";
 
 export type Icon = {
@@ -28,7 +29,7 @@ export const Banner = (props: IBanner) => {
         <S.ContentText>
           <S.Title>{title}</S.Title>
           <S.Description>{description}</S.Description>
-          <S.CTA>{ctaText}</S.CTA>
+          <Button scheme="fill">{ctaText}</Button>
         </S.ContentText>
 
         <S.ContentIcons>
