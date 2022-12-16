@@ -1,3 +1,4 @@
+import * as V from "styles/variables";
 import styled from "styled-components";
 
 type BaseButtonProps = {
@@ -28,7 +29,7 @@ export const Fill = styled.button<BaseButtonProps>`
   column-gap: 1rem;
   font-family: inherit;
   border: 0;
-  background-color: var(--cta-color);
+  background-color: ${V.PRIMARY_COLOR};
   border-radius: 4px;
   padding: 1.4rem 3.2rem;
   color: #fff;
@@ -39,7 +40,7 @@ export const Fill = styled.button<BaseButtonProps>`
   transition: 0.4s ease;
   :hover,
   :focus {
-    background-color: var(--cta-hover);
+    background-color: ${V.HOVER_COLOR};
   }
 `;
 

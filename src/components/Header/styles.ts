@@ -1,4 +1,4 @@
-import * as MediaQueryRanges from "styles/variables";
+import * as V from "styles/variables";
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -13,7 +13,7 @@ export const Header = styled.header`
     content: "";
     width: 4.3rem;
     height: 0.2rem;
-    background-color: var(--cta-color);
+    background-color: ${V.PRIMARY_COLOR};
     bottom: -2px;
     left: 2.4rem;
   }
@@ -35,7 +35,7 @@ export const ButtonsContainer = styled.div`
   justify-content: flex-end;
   margin-right: 8rem;
 
-  @media screen and (min-width: ${MediaQueryRanges.TABLET}) {
+  @media screen and (min-width: ${V.TABLET}) {
     display: flex;
   }
 `;

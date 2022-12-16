@@ -1,3 +1,4 @@
+import * as V from "styles/variables";
 import styled, { keyframes } from "styled-components";
 
 export const ProgressBar = keyframes`
@@ -24,7 +25,7 @@ export const Loader = styled.div`
   position: absolute;
   width: 100%;
   height: 0.3rem;
-  background-color: var(--cta-color);
+  background-color: ${V.PRIMARY_COLOR};
   bottom: -2px;
   left: 0;
   animation-name: ${ProgressBar};
@@ -82,7 +83,7 @@ export const Description = styled.p`
 export const CTA = styled.button`
   font-family: inherit;
   border: 0;
-  background-color: var(--cta-color);
+  background-color: ${V.PRIMARY_COLOR};
   border-radius: 4px;
   padding: 1.4rem 3.2rem;
   color: #fff;
@@ -94,7 +95,7 @@ export const CTA = styled.button`
 
   :hover,
   :focus {
-    background-color: var(--cta-hover);
+    background-color: ${V.HOVER_COLOR};
   }
 `;
 
