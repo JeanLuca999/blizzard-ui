@@ -1,3 +1,4 @@
+import * as MediaQueryRanges from "styles/variables";
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -24,6 +25,19 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+`;
+
+export const ButtonsContainer = styled.div`
+  display: none;
+  column-gap: 1.6rem;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 8rem;
+
+  @media screen and (min-width: ${MediaQueryRanges.TABLET}) {
+    display: flex;
+  }
 `;
 
 export const Logo = styled.img`
