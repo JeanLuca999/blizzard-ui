@@ -11,12 +11,4 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 10px;
     font-family: 'Poppins', sans-serif;
   }
-
-  :root {
-    --tablet: 768px;
-    --desktop: 1440px;
-    --large-desktop: 1920px;
-    --cta-color: #00aeff;
-    --cta-hover: #40C2FF;
-  }
 `;
