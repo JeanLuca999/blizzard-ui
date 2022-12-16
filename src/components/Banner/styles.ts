@@ -12,6 +12,7 @@ export const ProgressBar = keyframes`
 
 export const Wrapper = styled.div`
   min-height: 62.5rem;
+  padding-bottom: 6rem;
   position: relative;
   background-image: radial-gradient(
     73.1% 73.1% at 52.6% 25.14%,
@@ -26,7 +27,7 @@ export const Loader = styled.div`
   width: 100%;
   height: 0.3rem;
   background-color: ${V.PRIMARY_COLOR};
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   animation-name: ${ProgressBar};
   animation-timing-function: linear;
@@ -44,14 +45,35 @@ export const BannerImage = styled.img`
   z-index: -1;
 `;
 
+export const LogoBanner = styled.img`
+  display: none;
+  position: relative;
+  top: -6rem;
+  width: 25rem;
+  height: 20rem;
+  object-fit: contain;
+  object-position: center;
+  align-self: start;
+  justify-self: end;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    display: block;
+  }
+`;
+
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: 2fr auto;
   height: calc(62.5rem - 8rem);
   padding-left: 2.4rem;
   padding-right: 2.4rem;
   margin-top: 7rem;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    grid-template-columns: 1fr 28rem;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 export const ContentText = styled.div``;
@@ -60,7 +82,29 @@ export const ContentIcons = styled.div`
   display: flex;
   column-gap: 1rem;
   align-self: end;
-  padding-bottom: 6rem;
+`;
+
+export const ContentGif = styled.div`
+  display: none;
+  align-self: end;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    display: block;
+  }
+`;
+
+export const TitleGif = styled.span`
+  display: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: right;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    display: block;
+  }
 `;
 
 export const Title = styled.h1`
