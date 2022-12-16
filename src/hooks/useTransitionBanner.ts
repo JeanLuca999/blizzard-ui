@@ -59,16 +59,21 @@ export function useTransitionBanner() {
   const [currentItem, setCurrentItem] = useState<BannerItem>(bannerList[0]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const icons: Icon[] = bannerList.map((item) => ({
-    alt: item.alt,
-    icon: item.icon,
-    current: currentItem.id === item.id,
-    onClick: () => setCurrentItem(item),
-  }));
-
   const incrementIndex = (index: number) => {
     return index === bannerList.length - 1 ? 0 : index + 1;
   };
+
+  const handleChangeCurrentItem = (item: BannerItem, index: number) => {
+    setCurrentItem(item);
+    setCurrentIndex(index);
+  };
+
+  const icons: Icon[] = bannerList.map((item, index) => ({
+    alt: item.alt,
+    icon: item.icon,
+    current: currentItem.id === item.id,
+    onClick: () => handleChangeCurrentItem(item, index),
+  }));
 
   useEffect(() => {
     let interval = setInterval(() => {
