@@ -7,6 +7,16 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+`;
+
+export const Nav = styled.nav`
+  position: relative;
+  padding-left: 2.4rem;
+  padding-right: 2.8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 
   ::before {
     position: absolute;
@@ -14,18 +24,24 @@ export const Header = styled.header`
     width: 4.3rem;
     height: 0.2rem;
     background-color: ${V.PRIMARY_COLOR};
-    bottom: -2px;
+    bottom: -2.5rem;
     left: 2.4rem;
-  }
-`;
 
-export const Nav = styled.nav`
-  padding-left: 2.4rem;
-  padding-right: 2.8rem;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
+    @media screen and (min-width: ${V.TABLET}) {
+      bottom: -1.5rem;
+    }
+
+    @media screen and (min-width: ${V.DESKTOP}) {
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 135rem;
+    margin: 0 auto;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -37,6 +53,10 @@ export const ButtonsContainer = styled.div`
 
   @media screen and (min-width: ${V.TABLET}) {
     display: flex;
+  }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    margin-right: 0;
   }
 `;
 
@@ -51,6 +71,10 @@ export const MenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 0.9rem;
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    display: none;
+  }
 `;
 
 export const MenuItem = styled.div`
