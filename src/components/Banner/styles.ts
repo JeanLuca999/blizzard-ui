@@ -71,7 +71,7 @@ export const Container = styled.div`
   margin-top: 7rem;
 
   @media screen and (min-width: ${V.TABLET}) {
-    grid-template-columns: 1fr 28rem;
+    grid-template-columns: 1fr 22rem;
     grid-template-rows: auto 1fr;
   }
 `;
@@ -110,7 +110,7 @@ export const TitleGif = styled.span`
 export const Title = styled.h1`
   font-size: clamp(3rem, 3rem + 2vw, 4rem);
   width: 80%;
-  max-width: 56.2rem;
+  max-width: 62rem;
   font-weight: 700;
   line-height: 110%;
   color: #fff;
