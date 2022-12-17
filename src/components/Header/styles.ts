@@ -1,5 +1,6 @@
 import * as V from "styles/variables";
 import styled from "styled-components";
+import { ReactComponent as DropIcon } from "assets/drop-icon.svg";
 
 export const Header = styled.header`
   position: relative;
@@ -44,6 +45,56 @@ export const Nav = styled.nav`
   }
 `;
 
+export const UlDesktop = styled.ul`
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  column-gap: 5rem;
+  padding-left: 6.5rem;
+  width: 100%;
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    display: flex;
+  }
+`;
+
+export const LiDesktop = styled.li`
+  display: block;
+`;
+
+export const DropIconDesktop = styled(DropIcon)`
+  width: 1rem;
+  height: 1rem;
+  transition: ease 0.2s;
+  transform: rotateZ(0);
+`;
+
+export const NavButtonDesktop = styled.button`
+  display: flex;
+  font-family: inherit;
+  background-color: transparent;
+  color: inherit;
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.4rem;
+  cursor: pointer;
+  transition: ease 0.2s;
+
+  &:focus,
+  &:focus-within {
+    ${DropIconDesktop} {
+      transform: rotateZ(180deg);
+      path {
+        stroke: ${V.PRIMARY_COLOR};
+      }
+    }
+  }
+`;
+
 export const ButtonsContainer = styled.div`
   display: none;
   column-gap: 1.6rem;
@@ -65,6 +116,11 @@ export const Logo = styled.img`
   object-fit: contain;
   width: 6.9rem;
   height: 3.2rem;
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    width: 8rem;
+    height: 4rem;
+  }
 `;
 
 export const MenuWrapper = styled.div`
