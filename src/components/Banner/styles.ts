@@ -64,7 +64,7 @@ export const LogoBanner = styled.img`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
   min-height: calc(62.5rem - 8rem);
   padding-left: 2.4rem;
   padding-right: 2.4rem;
@@ -72,7 +72,7 @@ export const Container = styled.div`
 
   @media screen and (min-width: ${V.TABLET}) {
     grid-template-columns: 1fr 28rem;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
   }
 `;
 
