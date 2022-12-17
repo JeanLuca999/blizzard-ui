@@ -63,7 +63,7 @@ export const LogoBanner = styled.img`
   @media screen and (min-width: ${V.DESKTOP}) {
     grid-column: 3/4;
     grid-row: 1/2;
-    top: 0;
+    top: -3rem;
   }
 `;
 
@@ -87,7 +87,7 @@ export const Container = styled.div`
     max-width: 135rem;
     margin: 0 auto;
     padding: 0;
-    margin-top: 10rem;
+    margin-top: 7.7rem;
   }
 `;
 
@@ -114,6 +114,7 @@ export const ContentIcons = styled.div`
     align-items: center;
     row-gap: 2rem;
     justify-self: start;
+    padding-top: 3rem;
   }
 `;
 
