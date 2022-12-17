@@ -59,6 +59,12 @@ export const LogoBanner = styled.img`
   @media screen and (min-width: ${V.TABLET}) {
     display: block;
   }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    top: 0;
+  }
 `;
 
 export const Container = styled.div`
@@ -74,16 +80,41 @@ export const Container = styled.div`
     grid-template-columns: 1fr 28rem;
     grid-template-rows: auto 1fr;
   }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    max-width: 135rem;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 10rem;
+  }
 `;
 
 export const ContentText = styled.div`
   min-height: 36rem;
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 `;
 
 export const ContentIcons = styled.div`
   display: flex;
   column-gap: 1rem;
   align-self: end;
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    align-self: start;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    justify-self: start;
+  }
 `;
 
 export const ContentGif = styled.div`
@@ -92,6 +123,14 @@ export const ContentGif = styled.div`
 
   @media screen and (min-width: ${V.TABLET}) {
     display: block;
+  }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    grid-column: 3/4;
+    grid-row: 2/3;
   }
 `;
 
