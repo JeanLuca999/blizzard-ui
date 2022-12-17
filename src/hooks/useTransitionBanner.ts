@@ -12,11 +12,26 @@ import wowIcon from "assets/wow-icon.png";
 import diabloI from "assets/diablo-i-icon.png";
 import starcraftIcon from "assets/starcraft-icon.png";
 
+import diabloLogoBanner from "assets/diablo-logo-banner.png";
+import diabloGifPoster from "assets/diablo-animation-cover.png";
+import diabloGifSrc from "assets/diablo-animation.gif";
+
+import hearthstoneLogoBanner from "assets/hearthstone-logo-banner.png";
+import hearthstoneGifPoster from "assets/hearthstone-animation-cover.png";
+import hearthstoneGifSrc from "assets/hearthstone-animation.gif";
+
+import wowLogoBanner from "assets/wow-logo-banner.png";
+import wowGifPoster from "assets/wow-animation-cover.png";
+import wowGifSrc from "assets/wow-animation.gif";
+
 import { useEffect, useState } from "react";
 
 export type BannerItem = {
   id: number;
   banner: string;
+  logoBanner: string;
+  gifPoster: string;
+  gifSrc: string;
   title: string;
   description: string;
   ctaText: string;
@@ -28,6 +43,9 @@ const bannerList: BannerItem[] = [
   {
     id: 1,
     banner: diabloBanner,
+    logoBanner: diabloLogoBanner,
+    gifPoster: diabloGifPoster,
+    gifSrc: diabloGifSrc,
     icon: diabloIcon,
     alt: "diablo 4",
     title: "Retorne à escuridão com o game Diablo IV",
@@ -37,6 +55,9 @@ const bannerList: BannerItem[] = [
   {
     id: 2,
     banner: hearthstoneBanner,
+    logoBanner: hearthstoneLogoBanner,
+    gifPoster: hearthstoneGifPoster,
+    gifSrc: hearthstoneGifSrc,
     icon: hearthstoneIcon,
     alt: "hearthstone",
     title: "Novo pacote de expansão de Hearthstone",
@@ -47,6 +68,9 @@ const bannerList: BannerItem[] = [
   {
     id: 3,
     banner: wowBanner,
+    logoBanner: wowLogoBanner,
+    gifPoster: wowGifPoster,
+    gifSrc: wowGifSrc,
     icon: wowIcon,
     alt: "wow",
     title: "Desbrave as Terras Sombrias em Shadowlands!",
