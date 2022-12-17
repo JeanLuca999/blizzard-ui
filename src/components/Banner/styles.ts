@@ -71,12 +71,14 @@ export const Container = styled.div`
   margin-top: 7rem;
 
   @media screen and (min-width: ${V.TABLET}) {
-    grid-template-columns: 1fr 22rem;
+    grid-template-columns: 1fr 28rem;
     grid-template-rows: auto 1fr;
   }
 `;
 
-export const ContentText = styled.div``;
+export const ContentText = styled.div`
+  min-height: 36rem;
+`;
 
 export const ContentIcons = styled.div`
   display: flex;
