@@ -1,6 +1,8 @@
 //COMPONENTS
 import { Banner } from "components/Banner";
 import { Header } from "components/Header";
+
+//HOOKS
 import { useTransitionBanner } from "hooks/useTransitionBanner";
 
 const App = () => {
