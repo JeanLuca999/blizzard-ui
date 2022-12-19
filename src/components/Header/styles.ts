@@ -4,6 +4,7 @@ import { ReactComponent as DropIcon } from "assets/drop-icon.svg";
 
 export const Header = styled.header`
   position: relative;
+  z-index: 4;
   min-height: 8rem;
   display: flex;
   align-items: center;
@@ -12,6 +13,7 @@ export const Header = styled.header`
 
 export const Nav = styled.nav`
   position: relative;
+  z-index: 2;
   padding-left: 2.4rem;
   padding-right: 2.8rem;
   display: flex;
@@ -134,7 +136,7 @@ export const MenuWrapper = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  height: 0.2rem;
+  height: 0.1rem;
   width: 2.8rem;
   background-color: #fff;
 `;
