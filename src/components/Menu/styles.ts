@@ -21,6 +21,7 @@ export const Wrapper = styled.div<WrapperProps>`
     rgba(14, 17, 23, 0.92) 96.35%,
     rgba(14, 17, 23, 0.9) 100%
   );
+  backdrop-filter: blur(6px);
 `;
 
 export const ItemsWrapper = styled.div`
