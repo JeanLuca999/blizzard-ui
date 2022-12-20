@@ -26,12 +26,12 @@ export const Header = (props: IHeader) => {
         <S.UlDesktop>
           <S.LiDesktop>
             <S.NavButtonDesktop onClick={gamesMenuOnclick}>
-              Jogar <S.DropIconDesktop active={isGamesMenuActive} />
+              Jogar <S.DropIconDesktop $active={isGamesMenuActive} />
             </S.NavButtonDesktop>
           </S.LiDesktop>
           <S.LiDesktop>
             <S.NavButtonDesktop onClick={esportsMenuOnclick}>
-              Esportes <S.DropIconDesktop active={isEsportsMenuActive} />
+              Esportes <S.DropIconDesktop $active={isEsportsMenuActive} />
             </S.NavButtonDesktop>
           </S.LiDesktop>
           <S.LiDesktop>

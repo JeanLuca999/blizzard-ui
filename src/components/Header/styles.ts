@@ -66,21 +66,22 @@ export const LiDesktop = styled.li`
 `;
 
 type DropIconDesktopProps = {
-  active: boolean;
+  $active: boolean;
 };
 export const DropIconDesktop = styled(DropIcon)<DropIconDesktopProps>`
   width: 1rem;
   height: 1rem;
   transition: ease 0.2s;
   transform: rotateZ(0);
-  ${({ active }) =>
-    active &&
-    css`
-      transform: rotateZ(180deg);
-      path {
-        stroke: ${V.PRIMARY_COLOR};
-      }
-    `}
+  ${({ $active }) =>
+    $active
+      ? css`
+          transform: rotateZ(180deg);
+          path {
+            stroke: ${V.PRIMARY_COLOR};
+          }
+        `
+      : ""}
 `;
 
 export const NavButtonDesktop = styled.button`
