@@ -1,0 +1,1 @@
+export { getGamesList } from "./games";
