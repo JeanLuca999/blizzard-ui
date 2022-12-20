@@ -1,5 +1,5 @@
 import * as V from "styles/variables";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as DropIcon } from "assets/drop-icon.svg";
 
 export const Header = styled.header`
@@ -65,11 +65,22 @@ export const LiDesktop = styled.li`
   display: block;
 `;
 
-export const DropIconDesktop = styled(DropIcon)`
+type DropIconDesktopProps = {
+  active: boolean;
+};
+export const DropIconDesktop = styled(DropIcon)<DropIconDesktopProps>`
   width: 1rem;
   height: 1rem;
   transition: ease 0.2s;
   transform: rotateZ(0);
+  ${({ active }) =>
+    active &&
+    css`
+      transform: rotateZ(180deg);
+      path {
+        stroke: ${V.PRIMARY_COLOR};
+      }
+    `}
 `;
 
 export const NavButtonDesktop = styled.button`
@@ -85,16 +96,6 @@ export const NavButtonDesktop = styled.button`
   column-gap: 1.4rem;
   cursor: pointer;
   transition: ease 0.2s;
-
-  &:focus,
-  &:focus-within {
-    ${DropIconDesktop} {
-      transform: rotateZ(180deg);
-      path {
-        stroke: ${V.PRIMARY_COLOR};
-      }
-    }
-  }
 `;
 
 export const ButtonsContainer = styled.div`
