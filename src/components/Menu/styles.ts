@@ -24,7 +24,7 @@ export const Wrapper = styled.div<WrapperProps>`
   backdrop-filter: blur(6px);
 `;
 
-export const ItemsWrapper = styled.div`
+export const GamesItemsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -32,14 +32,28 @@ export const ItemsWrapper = styled.div`
   row-gap: 7rem;
 `;
 
-export const ItemImage = styled.img`
+export const EsportsItemsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  place-content: center;
+`;
+
+export const GamesItemImage = styled.img`
   width: 6.9rem;
   height: 6.9rem;
   object-fit: contain;
   object-position: center;
 `;
 
-export const ItemText = styled.span`
+export const EsportsItemImage = styled.img`
+  width: 17rem;
+  height: 17rem;
+  object-fit: contain;
+  object-position: center;
+`;
+
+export const GamesItemText = styled.span`
   display: block;
   font-size: 1.4rem;
   font-weight: 500;
@@ -49,7 +63,17 @@ export const ItemText = styled.span`
   line-height: 120%;
 `;
 
-export const ItemContainer = styled.div`
+export const EsportsItemText = styled.span`
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #9d9d9d;
+  text-align: center;
+  width: 13ch;
+  line-height: 120%;
+`;
+
+export const GamesItemContainer = styled.div`
   justify-self: center;
   width: 100%;
   height: 100%;
@@ -66,11 +90,39 @@ export const ItemContainer = styled.div`
 
   :hover {
     background-color: #000;
-    ${ItemText} {
+    ${GamesItemText} {
       color: #fff;
     }
 
-    ${ItemImage} {
+    ${GamesItemImage} {
+      transform: scale(1.2);
+      position: relative;
+      top: -5px;
+    }
+  }
+`;
+
+export const EsportsItemContainer = styled.div`
+  justify-self: center;
+  width: 100%;
+  height: 100%;
+  max-width: 15rem;
+  aspect-ratio: 2/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 2rem 0;
+  cursor: pointer;
+
+  :hover {
+    ${EsportsItemText} {
+      color: #fff;
+    }
+
+    ${EsportsItemImage} {
       transform: scale(1.2);
       position: relative;
       top: -5px;
