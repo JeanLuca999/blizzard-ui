@@ -71,6 +71,8 @@ export const ItemContainer = styled.div`
 
     ${ItemImage} {
       transform: scale(1.2);
+      position: relative;
+      top: -5px;
     }
   }
 `;
