@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import * as V from "styles/variables";
 
 type WrapperProps = {
   isActive: boolean;
 };
 export const Wrapper = styled.div<WrapperProps>`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 16rem;
@@ -22,6 +23,10 @@ export const Wrapper = styled.div<WrapperProps>`
     rgba(14, 17, 23, 0.9) 100%
   );
   backdrop-filter: blur(6px);
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    display: flex;
+  }
 `;
 
 export const GamesItemsWrapper = styled.div`
