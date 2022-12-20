@@ -6,11 +6,18 @@ import blizzardLogo from "assets/blizzard-logo.svg";
 import userIcon from "assets/user.svg";
 
 export interface IHeader {
+  isGamesMenuActive: boolean;
+  isEsportsMenuActive: boolean;
   gamesMenuOnclick: () => void;
   esportsMenuOnclick: () => void;
 }
 export const Header = (props: IHeader) => {
-  const { gamesMenuOnclick, esportsMenuOnclick } = props;
+  const {
+    isGamesMenuActive,
+    isEsportsMenuActive,
+    gamesMenuOnclick,
+    esportsMenuOnclick,
+  } = props;
   return (
     <S.Header>
       <S.Nav>
@@ -19,12 +26,12 @@ export const Header = (props: IHeader) => {
         <S.UlDesktop>
           <S.LiDesktop>
             <S.NavButtonDesktop onClick={gamesMenuOnclick}>
-              Jogar <S.DropIconDesktop />
+              Jogar <S.DropIconDesktop active={isGamesMenuActive} />
             </S.NavButtonDesktop>
           </S.LiDesktop>
           <S.LiDesktop>
             <S.NavButtonDesktop onClick={esportsMenuOnclick}>
-              Esportes <S.DropIconDesktop />
+              Esportes <S.DropIconDesktop active={isEsportsMenuActive} />
             </S.NavButtonDesktop>
           </S.LiDesktop>
           <S.LiDesktop>
