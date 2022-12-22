@@ -11,6 +11,7 @@ import { useGamesList } from "hooks/useGamesList";
 //MOCKS
 import { MenuMocks } from "mocks";
 import { BannerMocks } from "mocks";
+import { GamesList } from "components/GamesList";
 
 const App = () => {
   const { icons, current } = useTransitionBanner(BannerMocks.bannerList);
@@ -70,6 +71,8 @@ const App = () => {
         list={MenuMocks.esportsItems}
         footerList={MenuMocks.footerEsportsList}
       />
+
+      <GamesList list={gamesList} />
     </>
   );
 };
