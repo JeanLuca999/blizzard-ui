@@ -1,3 +1,4 @@
+import * as V from "styles/variables";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -10,5 +11,9 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 10px;
     font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background-color: ${V.BACKGROUND_MAIN};
   }
 `;
