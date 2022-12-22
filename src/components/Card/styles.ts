@@ -16,7 +16,7 @@ export const Container = styled.div`
     left: 0;
     right: 0;
     width: 130%;
-    height: 130%;
+    height: 100%;
     background: linear-gradient(
       182.71deg,
       #020203 2.26%,
@@ -89,7 +89,6 @@ export const Category = styled.p`
   color: #e5e5e5;
   font-size: 1.4rem;
   display: none;
-  display: block;
 
   @media screen and (min-width: ${V.TABLET}) {
     display: block;
