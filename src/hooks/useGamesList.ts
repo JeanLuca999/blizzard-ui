@@ -1,16 +1,10 @@
 import { useState, useEffect } from "react";
 import { getGamesList } from "services";
-
-export interface Card {
-  name: string;
-  category: string;
-  image: string;
-  logo: string;
-}
+import { ICard } from "components/Card";
 
 export function useGamesList() {
   const [loading, setLoading] = useState<boolean>(false);
-  const [data, setData] = useState<Card[]>([]);
+  const [data, setData] = useState<ICard[]>([]);
 
   useEffect(() => {
     (async () => {
