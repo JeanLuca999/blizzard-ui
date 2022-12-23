@@ -1,0 +1,1 @@
+export { BattlenetAbout } from "./BattlenetAbout";
