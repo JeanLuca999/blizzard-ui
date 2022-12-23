@@ -12,6 +12,8 @@ import { useGamesList } from "hooks/useGamesList";
 import { MenuMocks } from "mocks";
 import { BannerMocks } from "mocks";
 import { GamesList } from "components/GamesList";
+import { BattlenetAbout } from "components/BattlenetAbout";
+import { useVerifyUserDevice } from "hooks/useVerifyUserDevice";
 
 const App = () => {
   const { icons, current } = useTransitionBanner(BannerMocks.bannerList);
@@ -28,6 +30,8 @@ const App = () => {
   } = useToggleMenu();
 
   const { data: gamesList, loading: isGamesListLoading } = useGamesList();
+
+  const { name, icon } = useVerifyUserDevice(window.navigator.userAgent);
 
   const onToggleGamesMenu = () => {
     handleToggleGamesMenu();
@@ -73,6 +77,8 @@ const App = () => {
       />
 
       <GamesList list={gamesList} />
+
+      <BattlenetAbout deviceName={name} deviceIcon={icon} />
     </>
   );
 };
