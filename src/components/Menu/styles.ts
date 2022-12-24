@@ -35,6 +35,9 @@ export const GamesItemsWrapper = styled.div`
   grid-template-rows: 1fr 1fr;
   place-content: center;
   row-gap: 7rem;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
 `;
 
 export const EsportsItemsWrapper = styled.div`
@@ -42,6 +45,9 @@ export const EsportsItemsWrapper = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   place-content: center;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
 `;
 
 export const GamesItemImage = styled.img`
