@@ -8,8 +8,9 @@ export const Outlined = styled.button<BaseButtonProps>`
   border-radius: 3px;
   font-family: inherit;
   font-weight: 500;
+  font-size: 1.4rem;
   color: #fff;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   padding: ${({ padding }) => (padding ? padding : "1rem 1.6rem")};
   background-color: transparent;
   cursor: pointer;
