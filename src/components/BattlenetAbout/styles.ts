@@ -1,25 +1,66 @@
 import styled from "styled-components";
 import * as V from "styles/variables";
-import backgroundImage from "assets/background.png";
+import backgroundImageMobile from "assets/background-mobile.png";
+import backgroundImageTablet from "assets/background-tablet.png";
+import backgroundImageDesktop from "assets/background-desktop.png";
+import backgroundImageLargeDesktop from "assets/background-large-desktop.png";
 
 export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   padding-top: 6rem;
-  background-image: url(${backgroundImage});
+  background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(${backgroundImageMobile});
   background-repeat: no-repeat;
   background-size: cover;
+  mix-blend-mode: normal;
 
   @media screen and (min-width: ${V.TABLET}) {
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url(${backgroundImageTablet});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding-top: 11rem;
     padding-bottom: 10rem;
   }
 
   @media screen and (min-width: ${V.DESKTOP}) {
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url(${backgroundImageDesktop});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding-bottom: 25rem;
   }
 
   @media screen and (min-width: ${V.LARGE_DESKTOP}) {
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 60%
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%),
+      url(${backgroundImageLargeDesktop});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
     padding-bottom: 30rem;
   }
 `;
@@ -33,12 +74,13 @@ export const Container = styled.div`
 export const InfoContainer = styled.div`
   max-width: 135rem;
   padding: 0 2.4rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
 `;
 
 export const ImagesContainer = styled.div`
   position: relative;
-  min-height: min(calc(40rem + 5vw), 50rem);
+  min-height: min(calc(28rem + 22vw), 50rem);
   right: -2rem;
   pointer-events: none;
 
