@@ -2,18 +2,18 @@
 import { Banner } from "components/Banner";
 import { Header } from "components/Header";
 import { Menu } from "components/Menu";
+import { GamesList } from "components/GamesList";
+import { BattlenetAbout } from "components/BattlenetAbout";
 
 //HOOKS
 import { useTransitionBanner } from "hooks/useTransitionBanner";
 import { useToggleMenu } from "hooks/useToggleMenu";
 import { useGamesList } from "hooks/useGamesList";
+import { useVerifyUserDevice } from "hooks/useVerifyUserDevice";
 
 //MOCKS
 import { MenuMocks } from "mocks";
 import { BannerMocks } from "mocks";
-import { GamesList } from "components/GamesList";
-import { BattlenetAbout } from "components/BattlenetAbout";
-import { useVerifyUserDevice } from "hooks/useVerifyUserDevice";
 
 const App = () => {
   const { icons, current } = useTransitionBanner(BannerMocks.bannerList);
