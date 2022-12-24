@@ -2,15 +2,9 @@ import styled from "styled-components";
 import * as V from "styles/variables";
 import backgroundImage from "assets/background.png";
 
-/**
-  radial-gradient(
-      61.91% 61.91% at 58.62% 25.94%,
-      transparent 0%,
-      rgba(196, 196, 196, 0) 100%
-    ),
- */
-
 export const Wrapper = styled.div`
+  position: relative;
+  overflow: hidden;
   padding-top: 6rem;
   background-image: url(${backgroundImage});
   background-repeat: no-repeat;
@@ -18,51 +12,51 @@ export const Wrapper = styled.div`
 
   @media screen and (min-width: ${V.TABLET}) {
     padding-top: 11rem;
+    padding-bottom: 10rem;
   }
 
   @media screen and (min-width: ${V.DESKTOP}) {
-    padding-bottom: 10rem;
+    padding-bottom: 25rem;
+  }
+
+  @media screen and (min-width: ${V.LARGE_DESKTOP}) {
+    padding-bottom: 30rem;
   }
 `;
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 44rem;
   width: 100%;
-
-  @media screen and (min-width: ${V.TABLET}) {
-    grid-template-columns: 35rem 1fr;
-    justify-content: space-between;
-    grid-template-rows: 1fr;
-    padding-bottom: 7rem;
-  }
+  padding-top: 5rem;
+  overflow: hidden;
 `;
 
 export const InfoContainer = styled.div`
+  max-width: 135rem;
   padding: 0 2.4rem;
+  margin: 0 auto;
 `;
 
 export const ImagesContainer = styled.div`
   position: relative;
+  min-height: min(calc(40rem + 5vw), 50rem);
+  right: -2rem;
+  pointer-events: none;
 
-  /* ::before {
+  @media screen and (min-width: ${V.TABLET}) {
     position: absolute;
-    content: "";
-    inset: 0;
+    top: calc(10rem + 10vw);
     width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 1) 80%
-    );
-    z-index: 1;
+    right: calc(-28rem - 10vw);
+  }
 
-    @media screen and (min-width: ${V.TABLET}) {
-      display: none;
-    }
-  } */
+  @media screen and (min-width: ${V.DESKTOP}) {
+    top: min(calc(10rem + 15vw), 35.5rem);
+    right: -10vw;
+  }
+
+  @media screen and (min-width: ${V.LARGE_DESKTOP}) {
+    right: 1vw;
+  }
 `;
 
 export const Image = styled.img`
@@ -70,24 +64,50 @@ export const Image = styled.img`
 `;
 
 export const BattlenetImg = styled.img`
-  object-fit: scale-down;
   position: absolute;
-  bottom: 0;
-  object-position: right;
   z-index: 0;
-  object-position: right;
-  max-width: 770px;
+  bottom: 6rem;
   right: 0;
+  object-fit: cover;
+  object-position: right;
+  height: auto;
+  width: 100%;
+  max-width: 53rem;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    max-width: 80rem;
+  }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    max-width: 100rem;
+  }
 `;
 
 export const WowImg = styled.img`
-  object-fit: scale-down;
   position: absolute;
-  bottom: 0;
-  right: 0;
   z-index: 2;
+  bottom: 6rem;
+  right: 0;
+  object-fit: cover;
   object-position: right;
-  max-width: 600px;
+  height: auto;
+  width: 80%;
+  max-width: 27rem;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    max-width: 46rem;
+    right: calc(10rem + 10vw);
+  }
+
+  @media screen and (min-width: ${V.DESKTOP}) {
+    max-width: 56rem;
+    right: 4vw;
+  }
+
+  @media screen and (min-width: ${V.LARGE_DESKTOP}) {
+    right: 10vw;
+    bottom: 10rem;
+  }
 `;
 
 export const Title = styled.h2`
@@ -96,6 +116,15 @@ export const Title = styled.h2`
   color: #fff;
   line-height: 110%;
   margin: 3rem 0;
+  max-width: 13ch;
+
+  @media screen and (min-width: ${V.TABLET}) {
+    font-size: 3.2rem;
+  }
+
+  @media screen and (min-width: ${V.LARGE_DESKTOP}) {
+    max-width: 30ch;
+  }
 `;
 
 export const Ul = styled.ul`
