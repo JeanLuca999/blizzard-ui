@@ -12,8 +12,8 @@ export const Card = (props: ICard) => {
   return (
     <S.Wrapper tabIndex={0}>
       <S.Container>
-        <S.Image src={image} />
-        <S.Logo src={logo} />
+        <S.Image src={image} alt={name} />
+        <S.Logo src={logo} alt={name + " logo"} />
       </S.Container>
       <S.Title>{name}</S.Title>
       <S.Category>{category}</S.Category>
