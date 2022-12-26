@@ -8,15 +8,17 @@ import userIcon from "assets/user.svg";
 export interface IHeader {
   isGamesMenuActive: boolean;
   isEsportsMenuActive: boolean;
-  gamesMenuOnclick: () => void;
-  esportsMenuOnclick: () => void;
+  gamesMenuOnClick: () => void;
+  esportsMenuOnClick: () => void;
+  loginMenuOnClick: () => void;
 }
 export const Header = (props: IHeader) => {
   const {
     isGamesMenuActive,
     isEsportsMenuActive,
-    gamesMenuOnclick,
-    esportsMenuOnclick,
+    gamesMenuOnClick,
+    esportsMenuOnClick,
+    loginMenuOnClick,
   } = props;
   return (
     <S.Header>
@@ -25,12 +27,12 @@ export const Header = (props: IHeader) => {
 
         <S.UlDesktop>
           <S.LiDesktop>
-            <S.NavButtonDesktop onClick={gamesMenuOnclick}>
+            <S.NavButtonDesktop onClick={gamesMenuOnClick}>
               Jogar <S.DropIconDesktop $active={isGamesMenuActive} />
             </S.NavButtonDesktop>
           </S.LiDesktop>
           <S.LiDesktop>
-            <S.NavButtonDesktop onClick={esportsMenuOnclick}>
+            <S.NavButtonDesktop onClick={esportsMenuOnClick}>
               Esportes <S.DropIconDesktop $active={isEsportsMenuActive} />
             </S.NavButtonDesktop>
           </S.LiDesktop>
@@ -49,7 +51,12 @@ export const Header = (props: IHeader) => {
           <Button scheme="outlined" padding="1rem 1.6rem">
             Criar conta
           </Button>
-          <Button scheme="fill" padding="1rem 2rem" iconSrc={userIcon}>
+          <Button
+            scheme="fill"
+            padding="1rem 2rem"
+            iconSrc={userIcon}
+            onClick={loginMenuOnClick}
+          >
             Logar
           </Button>
         </S.ButtonsContainer>
