@@ -27,6 +27,16 @@ export const Container = styled.div`
     bottom: -100%;
     transition: ease-in-out 0.2s;
   }
+
+  ::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+  }
 `;
 
 export const Image = styled.img`
