@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 type BaseButtonProps = {
   padding?: string;
+  width?: string;
 };
 export const Outlined = styled.button<BaseButtonProps>`
   border-radius: 3px;
@@ -39,6 +40,7 @@ export const Fill = styled.button<BaseButtonProps>`
   line-height: 2.4rem;
   cursor: pointer;
   transition: 0.4s ease;
+  width: ${({ width }) => (width ? width : "")};
   :hover,
   :focus {
     background-color: ${V.HOVER_COLOR};
