@@ -14,6 +14,7 @@ import { useVerifyUserDevice } from "hooks/useVerifyUserDevice";
 //MOCKS
 import { MenuMocks } from "mocks";
 import { BannerMocks } from "mocks";
+import { CreateAccount } from "components/CreateAccount";
 
 const App = () => {
   const { icons, current } = useTransitionBanner(BannerMocks.bannerList);
@@ -29,7 +30,13 @@ const App = () => {
     handleHideMenu: handleHideEsportsMenu,
   } = useToggleMenu();
 
-  const { data: gamesList, loading: isGamesListLoading } = useGamesList();
+  const {
+    isShowing: loginMenu,
+    handleToggleMenu: handleToggleLoginMenu,
+    handleHideMenu: handleHideLoginMenu,
+  } = useToggleMenu();
+
+  const { data: gamesList } = useGamesList();
 
   const { name, icon } = useVerifyUserDevice(window.navigator.userAgent);
 
@@ -58,10 +65,13 @@ const App = () => {
         <Header
           isGamesMenuActive={gamesMenu}
           isEsportsMenuActive={esportsMenu}
-          gamesMenuOnclick={onToggleGamesMenu}
-          esportsMenuOnclick={onToggleEsportsMenu}
+          gamesMenuOnClick={onToggleGamesMenu}
+          esportsMenuOnClick={onToggleEsportsMenu}
+          loginMenuOnClick={handleToggleLoginMenu}
         />
       </Banner>
+
+      {loginMenu && <CreateAccount onClose={handleHideLoginMenu} />}
 
       <Menu
         scheme="games"
