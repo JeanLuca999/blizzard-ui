@@ -56,6 +56,7 @@ export const InputText = styled.input`
   max-width: 42.6rem;
   border-width: 2px;
   transition: ease 0.4s;
+  line-height: 2.2rem;
 
   ::placeholder {
     font-size: 1.5rem;
@@ -65,6 +66,10 @@ export const InputText = styled.input`
   :focus {
     border-color: ${V.HOVER_COLOR};
     color: #000;
+  }
+
+  :last-of-type {
+    margin-bottom: 0.8rem;
   }
 `;
 
