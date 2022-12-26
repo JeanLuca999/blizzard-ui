@@ -30,6 +30,10 @@ export const CreateAccount = (props: ICreateAccount) => {
     }
   };
 
+  const handleSubmit = (event: React.FormEvent<HTMLElement>) => {
+    event.preventDefault();
+  };
+
   useEffect(() => {
     const handlePressEsc = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -46,7 +50,7 @@ export const CreateAccount = (props: ICreateAccount) => {
     <S.Wrapper onClick={handleCloseOverlay}>
       <S.Container>
         <S.Image src={battlenetText} alt="Battlenet" />
-        <S.Form method="POST" autoComplete="new-password">
+        <S.Form autoComplete="new-password" onSubmit={handleSubmit}>
           <S.InputText
             placeholder="E-mail ou telefone"
             type="text"
