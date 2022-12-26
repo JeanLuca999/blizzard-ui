@@ -99,6 +99,7 @@ export const Category = styled.p`
   color: #e5e5e5;
   font-size: 1.4rem;
   display: none;
+  opacity: 0.7;
 
   @media screen and (min-width: ${V.TABLET}) {
     display: block;
