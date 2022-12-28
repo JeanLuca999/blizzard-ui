@@ -14,7 +14,7 @@ export interface IBanner {
   title: string;
   description: string;
   ctaText: string;
-  children: ReactNode;
+  children?: ReactNode;
   banner: string;
   logoBanner: string;
   gifPoster: string;
