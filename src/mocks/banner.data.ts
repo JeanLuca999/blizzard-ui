@@ -2,6 +2,7 @@
 import diabloBanner from "assets/diablo-banner.png";
 import hearthstoneBanner from "assets/hearthstone-banner.png";
 import wowBanner from "assets/wow-banner.png";
+import diabloImmortalBanner from "assets/diablo-immortal.jpg";
 
 import diabloIcon from "assets/diablo-icon.png";
 import hearthstoneIcon from "assets/hearthstone-icon.png";
@@ -20,6 +21,12 @@ import hearthstoneGifSrc from "assets/hearthstone-animation.gif";
 import wowLogoBanner from "assets/wow-logo-banner.png";
 import wowGifPoster from "assets/wow-animation-cover.png";
 import wowGifSrc from "assets/wow-animation.gif";
+
+import diabloImmortalLogoBanner from "assets/diablo-immortal-logo-banner.png";
+import starcraft from "assets/starcraft.jpg";
+import starcraftLogoBanner from "assets/starcraft-logo-banner.png";
+import starcraftGifSrc from "assets/starcraft-animation.gif";
+import starcrafGifPoster from "assets/starcraft-animation-cover.png";
 
 export const bannerList = [
   {
@@ -58,5 +65,29 @@ export const bannerList = [
     title: "Desbrave as Terras Sombrias em Shadowlands!",
     description: "O que jaz além do mundo que você conhece?",
     ctaText: "Reserve agora na pré-venda",
+  },
+  {
+    id: 4,
+    banner: diabloImmortalBanner,
+    logoBanner: diabloImmortalLogoBanner,
+    gifPoster: diabloGifPoster,
+    gifSrc: diabloGifSrc,
+    icon: diabloI,
+    alt: "diablo-immortal",
+    title: "Um capítulo inédito em Diablo Immortal",
+    description: "Salve Santuário nos dispositivos móveis e PC",
+    ctaText: "Jogue agora",
+  },
+  {
+    id: 5,
+    banner: starcraft,
+    logoBanner: starcraftLogoBanner,
+    gifPoster: starcrafGifPoster,
+    gifSrc: starcraftGifSrc,
+    icon: starcraftIcon,
+    alt: "diablo-immortal",
+    title: "O Supremo jogo de estratégia em tempo real",
+    description: "Viva a experiência de jogo que mudou o gênero de estratégia",
+    ctaText: "Jogue agora",
   },
 ];
