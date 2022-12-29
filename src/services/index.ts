@@ -1,1 +1,1 @@
-export { getGamesList } from "./games";
+export * as GamesService from "./games";
