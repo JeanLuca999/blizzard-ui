@@ -4,6 +4,7 @@ import { Header } from "components/Header";
 import { Menu } from "components/Menu";
 import { GamesList } from "components/GamesList";
 import { BattlenetAbout } from "components/BattlenetAbout";
+import { CreateAccount } from "components/CreateAccount";
 
 //HOOKS
 import { useTransitionBanner } from "hooks/useTransitionBanner";
@@ -14,7 +15,6 @@ import { useVerifyUserDevice } from "hooks/useVerifyUserDevice";
 //MOCKS
 import { MenuMocks } from "mocks";
 import { BannerMocks } from "mocks";
-import { CreateAccount } from "components/CreateAccount";
 
 const App = () => {
   const { icons, current } = useTransitionBanner(BannerMocks.bannerList);
