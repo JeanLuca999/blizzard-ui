@@ -8,7 +8,12 @@ export const Header = styled.header`
   min-height: 8rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.1);
+
+  @media screen and (min-width: ${V.TABLET}) {
+    min-height: 9.6rem;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -31,7 +36,7 @@ export const Nav = styled.nav`
     left: 2.4rem;
 
     @media screen and (min-width: ${V.TABLET}) {
-      bottom: -1.5rem;
+      bottom: -2.2rem;
     }
 
     @media screen and (min-width: ${V.DESKTOP}) {
@@ -123,6 +128,11 @@ export const Logo = styled.img`
 
   @media screen and (min-width: ${V.DESKTOP}) {
     width: 8rem;
+    height: 4rem;
+  }
+
+  @media screen and (min-width: ${V.LARGE_DESKTOP}) {
+    width: 11rem;
     height: 4rem;
   }
 `;
