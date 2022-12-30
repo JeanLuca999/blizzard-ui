@@ -30,6 +30,8 @@ npm start
 
 ## 💻 Preview do projeto
 
+Para visualizar o projeto completo online [clique aqui](https://blizzard-ui.vercel.app/). (https://blizzard-ui.vercel.app/)
+
 ### Large Desktop
 ![image-large-desktop](public/preview-large-desktop.png)
 
