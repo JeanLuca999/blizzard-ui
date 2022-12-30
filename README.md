@@ -13,7 +13,7 @@ O tema é uma landing page da empresa blizzard, nessa página o dev deverá cons
 - React Testing Library
 
 ## 💽 Como rodar o projeto
-para iniciar o projeto localmente realize um clone do repositório:
+Para iniciar o projeto localmente realize um clone do repositório:
 ```
 git clone https://github.com/JeanLuca999/blizzard-ui.git
 ```
@@ -23,7 +23,7 @@ Para instalar as dependências do projeto:
 npm install
 ```
 
-Para iniciar o projeto localmente:
+Após instalado as dependências, para iniciar o projeto:
 ```
 npm start
 ```
