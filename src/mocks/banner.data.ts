@@ -23,6 +23,8 @@ import wowGifPoster from "assets/wow-animation-cover.png";
 import wowGifSrc from "assets/wow-animation.gif";
 
 import diabloImmortalLogoBanner from "assets/diablo-immortal-logo-banner.png";
+import diabloImmortalGifSrc from "assets/diablo-immortal-animation.gif";
+import diabloImmortalGifPoster from "assets/diablo-immortal-animation-cover.jpg";
 import starcraft from "assets/starcraft.jpg";
 import starcraftLogoBanner from "assets/starcraft-logo-banner.png";
 import starcraftGifSrc from "assets/starcraft-animation.gif";
@@ -70,8 +72,8 @@ export const bannerList = [
     id: 4,
     banner: diabloImmortalBanner,
     logoBanner: diabloImmortalLogoBanner,
-    gifPoster: diabloGifPoster,
-    gifSrc: diabloGifSrc,
+    gifPoster: diabloImmortalGifPoster,
+    gifSrc: diabloImmortalGifSrc,
     icon: diabloI,
     alt: "diablo-immortal",
     title: "Um capítulo inédito em Diablo Immortal",
